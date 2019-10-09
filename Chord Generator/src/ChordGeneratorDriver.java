@@ -17,7 +17,8 @@ public class ChordGeneratorDriver
 				keySignatures.add(new keySignature ("AM", "Am", "BM", "Bm", "C#M", "C#m", "DM", "Dm", "EM", "Em", "F#M", "F#m", "G#M", "G#m"));
 				
 				ChordGeneratorGreetUser.introduceGenerator(); 
-				ChordGeneratorGreetUser.askIfWantInstructions(); 			
+				ChordGeneratorGreetUser.askIfWantInstructions(); 	
+				ChordGeneratorChoosing.chooseKeySignature(); 
 				
 				
 			}
