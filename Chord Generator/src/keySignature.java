@@ -14,7 +14,8 @@ public class keySignature
 		private String chordSixMajor; 
 		private String chordSixMinor; 
 		private String chordSevenMajor; 
-		private String chordSevenMinor; 
+		private String chordSevenMinor;
+		//commit
 		
 	
 		public keySignature(String oneM, String onem, String twoM, String twom, String threeM, String threem, String fourM, String fourm, String fiveM, String fivem, String sixM, String sixm, String sevenM, String sevenm)

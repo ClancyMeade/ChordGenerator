@@ -19,7 +19,7 @@ public class ChordGeneratorDriver
 				ChordGeneratorGreetUser.introduceGenerator(); 
 				ChordGeneratorGreetUser.askIfWantInstructions(); 	
 				ChordGeneratorChoosing.chooseKeySignature(); 
-				
+				//commit
 				
 			}
 

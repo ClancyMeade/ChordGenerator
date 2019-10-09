@@ -8,6 +8,7 @@ public class ChordGeneratorChoosing
 		{ 
 			System.out.println("Please choose a key signature");
 			System.out.println();
+			//commit
 		}
 		
 		
