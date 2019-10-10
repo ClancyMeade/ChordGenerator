@@ -52,7 +52,7 @@ public class ChordGeneratorGreetUser
 			System.out.println("For example, the chord F sharp major would be written as: F#M");
 			userInput.nextLine(); 
 			System.out.println("Okay, now you are ready.");
-			//commit
+			
 		}
 		
 		

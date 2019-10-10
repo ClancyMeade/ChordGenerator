@@ -1,6 +1,8 @@
 
 public class keySignature
 	{
+		private int index; 
+		private String MyKey;
 		private String chordOneMajor; 
 		private String chordOneMinor; 
 		private String chordTwoMajor; 
@@ -15,11 +17,14 @@ public class keySignature
 		private String chordSixMinor; 
 		private String chordSevenMajor; 
 		private String chordSevenMinor;
-		//commit
+		
+		
 		
 	
-		public keySignature(String oneM, String onem, String twoM, String twom, String threeM, String threem, String fourM, String fourm, String fiveM, String fivem, String sixM, String sixm, String sevenM, String sevenm)
+		public keySignature(int ind, String tKey, String oneM, String onem, String twoM, String twom, String threeM, String threem, String fourM, String fourm, String fiveM, String fivem, String sixM, String sixm, String sevenM, String sevenm)
 		{
+			index = ind;
+			MyKey = tKey; 
 			chordOneMajor = oneM; 
 			chordOneMinor = onem; 
 			chordTwoMajor = twoM; 
@@ -36,7 +41,25 @@ public class keySignature
 			chordSevenMinor = sevenm;
 			
 		}
+		
+		public int getIndex() 
+		{
+			return index;
+		}
 
+		public void setIndex(int index)
+		{
+			this.index = index;
+		}
+
+		public String getMyKey() 
+		{
+			return MyKey;
+		}
+
+		public void setMyKey(String myKey) {
+			MyKey = myKey;
+		}
 
 		public String getChordOneMajor()
 			{
