@@ -33,13 +33,13 @@ public class ChordGeneratorDriver
 				//F Major = one flat
 				keySignatures.add(new keySignature (0, "FMajor", "FM", "Fm", "GM", "Gm", "AM", "Am", "Bb", "Bbm", "CM", "Cm", "DM", "Dm", "EM", "Em")); 
 				//B flat Major = two flats
-				keySignatures.add(new keySignature (0, "FMajor", "FM", "Fm", "GM", "Gm", "AM", "Am", "Bb", "Bbm", "CM", "Cm", "DM", "Dm", "EbM", "Ebm")); 
+				keySignatures.add(new keySignature (0, "BMajor", "FM", "Fm", "GM", "Gm", "AM", "Am", "Bb", "Bbm", "CM", "Cm", "DM", "Dm", "EbM", "Ebm")); 
 				//E flat Major = three flats
-				keySignatures.add(new keySignature (0, "FMajor", "FM", "Fm", "GM", "Gm", "AbM", "Abm", "Bb", "Bbm", "CM", "Cm", "DM", "Dm", "EbM", "Ebm")); 
+				keySignatures.add(new keySignature (0, "EMajor", "FM", "Fm", "GM", "Gm", "AbM", "Abm", "Bb", "Bbm", "CM", "Cm", "DM", "Dm", "EbM", "Ebm")); 
 				//A flat Major = four flats
-				keySignatures.add(new keySignature (0, "FMajor", "FM", "Fm", "GM", "Gm", "AbM", "Abm", "Bb", "Bbm", "CM", "Cm", "DbM", "Dbm", "EbM", "Ebm")); 
+				keySignatures.add(new keySignature (0, "AMajor", "FM", "Fm", "GM", "Gm", "AbM", "Abm", "Bb", "Bbm", "CM", "Cm", "DbM", "Dbm", "EbM", "Ebm")); 
 				//D flat Major = five flats
-				keySignatures.add(new keySignature (0, "FMajor", "FM", "Fm", "GbM", "Gbm", "AbM", "Abm", "Bb", "Bbm", "CM", "Cm", "DbM", "Dbm", "EbM", "Ebm")); 
+				keySignatures.add(new keySignature (0, "DMajor", "FM", "Fm", "GbM", "Gbm", "AbM", "Abm", "Bb", "Bbm", "CM", "Cm", "DbM", "Dbm", "EbM", "Ebm")); 
 				
 			
 				ChordGeneratorGreetUser.introduceGenerator(); 
