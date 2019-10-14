@@ -1,4 +1,5 @@
 import java.util.Scanner; 
+import java.util.concurrent.TimeUnit; 
 
 public class ChordGeneratorGreetUser
 	{	
@@ -59,38 +60,6 @@ public class ChordGeneratorGreetUser
 		
 		
 		
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			/*if (name.toUpperCase().equals("RYAN"))
-					{
-						System.out.println("You SUCK!");
-					}*/
-			
-			
+		
 		}
 	
