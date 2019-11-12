@@ -22,7 +22,7 @@ public class keySignature
 				String threem, String fourM, String fourm, String fiveM, String fivem, String sixM, String sixm,
 				String sevenM, String sevenm)
 			{
-				index = ind; 
+				index = ind;
 				MyKey = tKey;
 				chordOneMajor = oneM;
 				chordOneMinor = onem;
