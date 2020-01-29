@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class ChordGeneratorDriver
 	{
+
 		static ArrayList<keySignature> keySignatures = new ArrayList<keySignature>();
 
 		static ArrayList<String> chordProgressions = new ArrayList<String>();

@@ -1,4 +1,10 @@
 import java.util.Scanner;
+
+import java.awt.image.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.util.concurrent.TimeUnit;
 
 public class ChordGeneratorChoosing
@@ -17,20 +23,31 @@ public class ChordGeneratorChoosing
 		static String romanToChordTwo;
 		static String romanToChordThree;
 		static String romanToChordFour;
+		static String panelKeySignature;
+		static String panelFinalChords;
+	
+
+		static final JFrame frame = new JFrame();
 
 		public static void makeKeySignatureList()
 			{
-				System.out.println("Please choose a key signature below:");
+
+				String keySignatureList = "";
 
 				for (int c = 0; c < ChordGeneratorDriver.keySignatures.size(); c++)
 					{
-						System.out.println("(" + (c) + ") " + ChordGeneratorDriver.keySignatures.get(c).getMyKey());
+						keySignatureList += (" (" + (c + 1) + ")   " + ChordGeneratorDriver.keySignatures.get(c).getMyKey()
+								+ "\n");
 					}
+
+				panelKeySignature = JOptionPane.showInputDialog(frame,
+						"Please choose a key signature below: \n" + keySignatureList);
 			}
 
 		public static void chooseKeySignature()
 			{
-				chosenKeySignatureIndex = userInput.nextInt();
+
+				chosenKeySignatureIndex = Integer.parseInt(panelKeySignature) - 1;
 
 				for (int j = 0; j < ChordGeneratorDriver.keySignatures.size(); j++)
 					{
@@ -42,9 +59,9 @@ public class ChordGeneratorChoosing
 						if (chosenKeySignatureIndex == definedKeySignatureIndex)
 							{
 								chosenKeySignature = ChordGeneratorDriver.keySignatures.get(j).getMyKey();
-								userInput.nextLine();
-								System.out.println("Okay, you chose the key of: " + chosenKeySignature);
-								userInput.nextLine();
+
+								JOptionPane.showMessageDialog(frame,
+										"Okay, you chose the key of: " + chosenKeySignature);
 
 							}
 					}
@@ -56,8 +73,8 @@ public class ChordGeneratorChoosing
 				while (userInputError)
 					{
 
-						System.out.println("Would you like the instructions for chord progressions?\n(1) Yes\n(2) No");
-						String wantInstructions = userInput.nextLine();
+						String wantInstructions = JOptionPane.showInputDialog(frame,
+								"Would you like the instructions for chord progressions?\n(1) Yes\n(2) No");
 
 						if (wantInstructions.equals("1") || wantInstructions.toUpperCase().equals("ONE"))
 							{
@@ -67,8 +84,8 @@ public class ChordGeneratorChoosing
 
 						else if (wantInstructions.equals("2") || wantInstructions.toUpperCase().equals("TWO"))
 							{
-								System.out.println("Okay, great. It is now time to choose a chord progression.");
-								userInput.nextLine();
+								JOptionPane.showMessageDialog(frame,
+										"Okay, great. It is now time to choose a chord progression.");
 								userInputError = false;
 
 							}
@@ -83,44 +100,42 @@ public class ChordGeneratorChoosing
 
 		public static void giveChordProgressionInstructions()
 			{
-				System.out.println("Okay, here are the instructions:");
-				userInput.nextLine();
-				System.out.println(
+				JOptionPane.showMessageDialog(frame, "Okay, here are the instructions:");
+
+				JOptionPane.showMessageDialog(frame,
 						"You will choose from a set of chord progression wich each look like this. I, II, IIIm, V.\nEach Roman Numeral represents a chord in the chosen key signature.");
-				userInput.nextLine();
-				System.out.println(
+
+				JOptionPane.showMessageDialog(frame,
 						"\"m\" shows that the chord is minor.\nNo \"m\" attached to the Roman Numeral means that the chord is Major.");
-				userInput.nextLine();
-				System.out.println(
+
+				JOptionPane.showMessageDialog(frame,
 						"So, this chord progression: Vm, II, III, Im =\nChord 5 minor\nChord 2 Major\nChord 3 Major\nChord 1 Minor");
-				userInput.nextLine();
-				System.out.println("Okay, now it is time to choose a chord progression.");
+
+				JOptionPane.showMessageDialog(frame, "Okay, now it is time to choose a chord progression.");
 			}
 
 		public static void makeChordProgressionList()
 			{
-				System.out.println("Please Choose a chord progression below.");
+
+				panelKeySignature = "";
 
 				for (int i = 0; i < ChordGeneratorDriver.chordProgressions.size(); i++)
 					{
-						System.out.println("(" + (i) + ") " + ChordGeneratorDriver.chordProgressions.get(i));
-						System.out.println();
+						panelKeySignature += (("(" + (i + 1) + ")   " + ChordGeneratorDriver.chordProgressions.get(i)
+								+ "\n"));
 
 					}
+
+				chosenChordProgressionIndex = Integer.parseInt(JOptionPane.showInputDialog(frame,
+						"Please choose a chord progression below: \n" + panelKeySignature))-1;
 			}
 
 		public static void chooseChordProgression()
 			{
-				chosenChordProgressionIndex = userInput.nextInt();
 				chosenChordProgression = ChordGeneratorDriver.chordProgressions.get(chosenChordProgressionIndex);
-				userInput.nextLine();
-				System.out.println("Awesome, you chose the \"" + chosenChordProgression + "\" chord progression.");
-				userInput.nextLine();
-				System.out.print("Now locating your chords");
-				System.out.print(".");
-				System.out.print(".");
-				System.out.println(".");
-				userInput.nextLine();
+
+				JOptionPane.showMessageDialog(frame, "Awesome, you chose the \"" + chosenChordProgression
+						+ "\" chord progression. \n" + "Now locating your chords...");
 
 			}
 
@@ -500,29 +515,29 @@ public class ChordGeneratorChoosing
 
 		public static void giveChords()
 			{
-				System.out.println("In the key of " + chosenKeySignature + ", your chords for the chord progression \""
-						+ chosenChordProgression + "\" are:");
-				userInput.nextLine();
-				System.out.println(romanToChordOne);
-				userInput.nextLine();
-				System.out.println(romanToChordTwo);
-				userInput.nextLine();
-				System.out.println(romanToChordThree);
-				userInput.nextLine();
-				System.out.println(romanToChordFour);
-				System.out.println();
+				JOptionPane.showMessageDialog(frame, "In the key of " + chosenKeySignature
+						+ ", your chords for the chord progression \"" + chosenChordProgression + "\" are:");
 
-				System.out.println("Would you like to start over with a different key signature?\n (1) Yes\n (2) No");
-				int choice = userInput.nextInt();
+				JOptionPane.showMessageDialog(frame, "(1)   " + romanToChordOne + "\n(2)   " + romanToChordTwo + "\n(3)   "
+						+ romanToChordThree + "\n(4)   " + romanToChordFour);
+
+				int choice = Integer.parseInt(JOptionPane.showInputDialog(frame,
+						"Would you like to start over with a different key signature?\n (1) Yes\n (2) No"));
+
 				if (choice == 1)
 					{
-						System.out.println("Okay, lets go.");
+						JOptionPane.showMessageDialog(frame, "Okay, lets go.");
 						boolean wantMoreChords = true;
 					}
 
 				else
 					{
-						System.out.println("Thank you, have a nice day.");
+						JFrame image = new JFrame();
+
+						ImageIcon pianoPicture = new ImageIcon("PianoTwo.jpg");
+
+						
+						JOptionPane.showMessageDialog(image, "Thank you, have a nice day.", null, 0, pianoPicture);
 						ChordGeneratorDriver.wantMoreChords = false;
 					}
 
