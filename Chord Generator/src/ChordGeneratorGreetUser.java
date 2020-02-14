@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.util.concurrent.TimeUnit;
 import javax.swing.ImageIcon;
-import javax.swing.UIManager;
+import javax.swing.UIManager; 
 
 public class ChordGeneratorGreetUser
 	{
@@ -16,16 +16,16 @@ public class ChordGeneratorGreetUser
 
 		public static void introduceGenerator()
 			{
-				UIManager.put("OptionPane.background", Color.cyan);
+				UIManager.put("OptionPane.background", Color.YELLOW);
 				UIManager.put("Panel.background", Color.DARK_GRAY);
 				UIManager.put("Button.background", Color.green);
-				UIManager.put("OptionPane.messageForeground", Color.cyan);
+				UIManager.put("OptionPane.messageForeground", Color.yellow);
 
 				JFrame image = new JFrame();
 
 				ImageIcon pianoPicture = new ImageIcon("Piano.jpg");
 
-				JOptionPane.showMessageDialog(image, "Hello, welcome to the Chord Generator", null, 0, pianoPicture);
+				JOptionPane.showMessageDialog(image, "Hello, welcome to " + "Chord Generator", null, 0, pianoPicture);
 
 				String name = JOptionPane.showInputDialog(frame, "What is your name?");
 

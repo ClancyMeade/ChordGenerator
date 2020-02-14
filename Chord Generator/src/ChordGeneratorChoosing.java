@@ -515,10 +515,10 @@ public class ChordGeneratorChoosing
 
 		public static void giveChords()
 			{
-				JOptionPane.showMessageDialog(frame, "In the key of " + chosenKeySignature
-						+ ", your chords for the chord progression \"" + chosenChordProgression + "\" are:");
+				
 
-				JOptionPane.showMessageDialog(frame, "(1)   " + romanToChordOne + "\n(2)   " + romanToChordTwo + "\n(3)   "
+				JOptionPane.showMessageDialog(frame, "In the key of " + chosenKeySignature
+						+ ", your chords for the chord progression \"" + chosenChordProgression + "\" are:\n" + "(1)   " + romanToChordOne + "\n(2)   " + romanToChordTwo + "\n(3)   "
 						+ romanToChordThree + "\n(4)   " + romanToChordFour);
 
 				int choice = Integer.parseInt(JOptionPane.showInputDialog(frame,
